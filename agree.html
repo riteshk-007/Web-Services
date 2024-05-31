@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Agreement Download</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      .content {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: auto;
+      }
+      h3 {
+        color: #333;
+        text-align: start;
+      }
+      p,
+      ul,
+      table {
+        color: #333;
+        line-height: 1.6;
+      }
+      ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        display: inline-block;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      @media (max-width: 600px) {
+        .content {
+          padding: 10px;
+        }
+        button {
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+      .option {
+        display: inline-block;
+        background: #2980b9;
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html" class="option">Back</a>
+    <div class="content" id="content">
+      <h3>Website Development Service Agreement</h3>
+
+      <p>
+        <strong>This Service Agreement</strong> ("Agreement") is made on this
+        [Date] day of [Month], [Year] by and between:
+      </p>
+
+      <p>
+        <strong>[Your Name]</strong>, an individual/freelancer with principal
+        place of business at [Your Address] (hereinafter referred to as the
+        "Developer")
+      </p>
+      <p>AND</p>
+      <p>
+        <strong>[Client's Name]</strong>, an individual/company with principal
+        place of business at [Client's Address] (hereinafter referred to as the
+        "Client").
+      </p>
+
+      <h3>1. Scope of Work</h3>
+      <p>
+        The Developer agrees to provide the following services as per the terms
+        and conditions mentioned in this Agreement:
+      </p>
+      <ul>
+        <li>Website Development</li>
+        <li>Website Changes and Updates</li>
+        <li>Error and Typo Fixes</li>
+        <li>Additional Features as required by the Client</li>
+      </ul>
+
+      <h3>2. Payment Terms</h3>
+      <ul>
+        <li>
+          <strong>Advance Payment:</strong> The Client agrees to pay 50% of the
+          total project cost in advance before the commencement of any work.
+        </li>
+        <li>
+          <strong>Final Payment:</strong> The remaining 50% of the total project
+          cost will be paid upon delivery and acceptance of the completed
+          website.
+        </li>
+        <li>
+          <strong>Payment Methods:</strong> Payments can be made via bank
+          transfer, cheque, or any other agreed-upon method.
+        </li>
+      </ul>
+
+      <h3>3. Project Timeline</h3>
+      <p>
+        The Developer agrees to complete the project within [number]
+        weeks/months from the date of receiving the advance payment. Any delays
+        will be communicated promptly to the Client.
+      </p>
+
+      <h3>4. Revisions and Changes</h3>
+      <p>
+        The Client is entitled to [number] revisions within the scope of the
+        initial agreement. Any additional changes or revisions will be charged
+        as per the Developer’s standard rates.
+      </p>
+
+      <h3>5. Confidentiality</h3>
+      <p>
+        Both parties agree to keep all project-related information confidential
+        and not disclose it to any third party without prior written consent.
+      </p>
+
+      <h3>6. Termination</h3>
+      <p>
+        Either party may terminate this Agreement with a written notice of
+        [number] days. Upon termination, the Client agrees to pay for all work
+        completed up to the date of termination.
+      </p>
+
+      <h3>7. Liability</h3>
+      <p>
+        The Developer shall not be liable for any indirect, incidental, or
+        consequential damages arising out of or in connection with the services
+        provided.
+      </p>
+
+      <h3>8. Governing Law</h3>
+      <p>
+        This Agreement shall be governed by and construed in accordance with the
+        laws of India. Any disputes arising out of or in connection with this
+        Agreement shall be subject to the exclusive jurisdiction of the courts
+        of [Your City], India.
+      </p>
+
+      <h3>9. Acceptance</h3>
+      <p>
+        By signing this Agreement, both parties acknowledge that they have read,
+        understood, and agreed to the terms and conditions outlined above.
+      </p>
+
+      <p>
+        <strong>Developer</strong><br />
+        Name: [Your Name]<br />
+        Signature: ___________________________<br />
+        Date: _______________________________
+      </p>
+
+      <p>
+        <strong>Client</strong><br />
+        Name: [Client's Name]<br />
+        Signature: ___________________________<br />
+        Date: _______________________________
+      </p>
+
+      <h3>Notes:</h3>
+      <ul>
+        <li>
+          Ensure that all details such as names, addresses, dates, and specific
+          terms are accurately filled in.
+        </li>
+        <li>
+          It might be a good idea to consult with a legal professional to ensure
+          that the agreement is comprehensive and fully compliant with Indian
+          laws.
+        </li>
+      </ul>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px">
+      <button onclick="downloadAsImage()">Download as Image</button>
+      <button onclick="downloadAsPDF()">Download as PDF</button>
+    </div>
+
+    <script>
+      function downloadAsImage() {
+        html2canvas(document.getElementById("content"), { scale: 2 }).then(
+          (canvas) => {
+            let link = document.createElement("a");
+            link.href = canvas.toDataURL("image/png");
+            link.download = "service_agreement.png";
+            link.click();
+          }
+        );
+      }
+
+      function downloadAsPDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF("p", "mm", "a4");
+        const content = document.getElementById("content");
+        html2canvas(content, { scale: 2 }).then((canvas) => {
+          const imgData = canvas.toDataURL("image/png");
+          const imgWidth = 210;
+          const pageHeight = 297;
+          const imgHeight = (canvas.height * imgWidth) / canvas.width;
+          let heightLeft = imgHeight;
+          let position = 0;
+
+          doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+          heightLeft -= pageHeight;
+
+          while (heightLeft > 0) {
+            position = heightLeft - imgHeight;
+            doc.addPage();
+            doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+            heightLeft -= pageHeight;
+          }
+          doc.save("service_agreement.pdf");
+        });
+      }
+    </script>
+  </body>
+</html>

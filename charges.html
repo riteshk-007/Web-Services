@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Options</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      .content {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h3 {
+        color: #333;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .option {
+        display: inline-block;
+        background: #2980b9;
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+        margin: 10px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html" class="option">Back</a>
+    <div class="content" id="content">
+      <h3>Website Development Charges</h3>
+      <table>
+        <tr>
+          <th>Service Type</th>
+          <th>Description</th>
+          <th>Charge (INR)</th>
+        </tr>
+        <tr>
+          <td>Basic Website Development</td>
+          <td>Up to 5 pages, responsive design, basic SEO</td>
+          <td>15,000</td>
+        </tr>
+        <tr>
+          <td>Standard Website Development</td>
+          <td>Up to 10 pages, responsive design, basic SEO, contact form</td>
+          <td>25,000</td>
+        </tr>
+        <tr>
+          <td>Advanced Website Development</td>
+          <td>Up to 20 pages, e-commerce functionality, advanced SEO</td>
+          <td>50,000</td>
+        </tr>
+        <tr>
+          <td>Premium Website Development</td>
+          <td>Custom design, unlimited pages, e-commerce, advanced SEO</td>
+          <td>75,000</td>
+        </tr>
+      </table>
+
+      <h3>Website Change Charges</h3>
+      <table>
+        <tr>
+          <th>Service Type</th>
+          <th>Description</th>
+          <th>Charge (INR)</th>
+        </tr>
+        <tr>
+          <td>Minor Changes</td>
+          <td>Text changes, image replacement (per change)</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td>Moderate Changes</td>
+          <td>Adding new pages, restructuring content (per page)</td>
+          <td>2,000</td>
+        </tr>
+        <tr>
+          <td>Major Changes</td>
+          <td>Redesigning sections, changing layout (per section)</td>
+          <td>5,000</td>
+        </tr>
+      </table>
+
+      <h3>Error/Typo Fix Charges</h3>
+      <table>
+        <tr>
+          <th>Service Type</th>
+          <th>Description</th>
+          <th>Charge (INR)</th>
+        </tr>
+        <tr>
+          <td>Minor Typo Fix</td>
+          <td>Correcting typos, small text edits (per fix)</td>
+          <td>400</td>
+        </tr>
+        <tr>
+          <td>Bug Fix</td>
+          <td>Fixing small bugs or errors (per fix)</td>
+          <td>1,000</td>
+        </tr>
+        <tr>
+          <td>Major Bug Fix</td>
+          <td>Fixing critical errors, site down issues (per fix)</td>
+          <td>5,000</td>
+        </tr>
+      </table>
+
+      <h3>Additional Features Charges</h3>
+      <table>
+        <tr>
+          <th>Feature Type</th>
+          <th>Description</th>
+          <th>Charge (INR)</th>
+        </tr>
+        <tr>
+          <td>Blog Integration</td>
+          <td>Adding a blog section with CMS</td>
+          <td>10,000</td>
+        </tr>
+        <tr>
+          <td>E-commerce Integration</td>
+          <td>Adding e-commerce functionality (up to 20 products)</td>
+          <td>25,000</td>
+        </tr>
+        <tr>
+          <td>Additional Product Integration</td>
+          <td>Adding more products (per 10 products)</td>
+          <td>5,000</td>
+        </tr>
+        <tr>
+          <td>SEO Services</td>
+          <td>Advanced SEO services</td>
+          <td>15,000</td>
+        </tr>
+        <tr>
+          <td>Website Maintenance</td>
+          <td>Monthly maintenance and updates</td>
+          <td>5,000/month</td>
+        </tr>
+        <tr>
+          <td>Custom Feature Development</td>
+          <td>Custom feature as per client requirement (per feature)</td>
+          <td>10,000+</td>
+        </tr>
+      </table>
+
+      <p>Notes:</p>
+      <ul>
+        <li>
+          The above charges are starting prices and may vary depending on the
+          complexity and specific requirements of the project.
+        </li>
+        <li>
+          Any urgent requests or weekend work may incur additional charges.
+        </li>
+        <li>
+          Long-term maintenance contracts can be negotiated based on the
+          frequency and volume of updates required.
+        </li>
+      </ul>
+    </div>
+
+    <button onclick="downloadAsImage()">Download as Image</button>
+    <button onclick="downloadAsPDF()">Download as PDF</button>
+    <button onclick="downloadAsExcel()">Download as Excel</button>
+
+    <script>
+      function downloadAsImage() {
+        html2canvas(document.getElementById("content")).then((canvas) => {
+          let link = document.createElement("a");
+          link.href = canvas.toDataURL("image/png");
+          link.download = "website_charges.png";
+          link.click();
+        });
+      }
+
+      function downloadAsPDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF("p", "pt", "a4");
+        html2canvas(document.getElementById("content")).then((canvas) => {
+          const imgData = canvas.toDataURL("image/png");
+          const imgWidth = 595.28;
+          const pageHeight = 841.89;
+          const imgHeight = (canvas.height * imgWidth) / canvas.width;
+          let heightLeft = imgHeight;
+          let position = 0;
+
+          doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+          heightLeft -= pageHeight;
+
+          while (heightLeft >= 0) {
+            position = heightLeft - imgHeight;
+            doc.addPage();
+            doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+            heightLeft -= pageHeight;
+          }
+          doc.save("website_charges.pdf");
+        });
+      }
+
+      function downloadAsExcel() {
+        const data = [];
+        const headers = ["Service Type", "Description", "Charge (INR)"];
+
+        data.push(headers);
+        const tables = document.querySelectorAll("table");
+        tables.forEach((table, index) => {
+          const rows = table.querySelectorAll("tr");
+          rows.forEach((row) => {
+            const rowData = [];
+            const cells = row.querySelectorAll("th, td");
+            cells.forEach((cell) => {
+              rowData.push(cell.innerText);
+            });
+            data.push(rowData);
+          });
+        });
+
+        const ws = XLSX.utils.aoa_to_sheet(data);
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, "Charges");
+        XLSX.writeFile(wb, "website_charges.xlsx");
+      }
+    </script>
+  </body>
+</html>
