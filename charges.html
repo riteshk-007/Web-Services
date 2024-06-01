@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Download Options</title>
+    <title>Web Development Charges</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -91,12 +91,12 @@
         <tr>
           <td>Advanced Website Development</td>
           <td>Up to 20 pages, e-commerce functionality, advanced SEO</td>
-          <td>50,000</td>
+          <td>40,000</td>
         </tr>
         <tr>
           <td>Premium Website Development</td>
           <td>Custom design, unlimited pages, e-commerce, advanced SEO</td>
-          <td>75,000</td>
+          <td>65,000</td>
         </tr>
       </table>
 
@@ -110,17 +110,17 @@
         <tr>
           <td>Minor Changes</td>
           <td>Text changes, image replacement (per change)</td>
-          <td>500</td>
+          <td>400</td>
         </tr>
         <tr>
           <td>Moderate Changes</td>
           <td>Adding new pages, restructuring content (per page)</td>
-          <td>2,000</td>
+          <td>1,000</td>
         </tr>
         <tr>
           <td>Major Changes</td>
           <td>Redesigning sections, changing layout (per section)</td>
-          <td>5,000</td>
+          <td>3,000</td>
         </tr>
       </table>
 
@@ -139,12 +139,12 @@
         <tr>
           <td>Bug Fix</td>
           <td>Fixing small bugs or errors (per fix)</td>
-          <td>1,000</td>
+          <td>1,500</td>
         </tr>
         <tr>
           <td>Major Bug Fix</td>
           <td>Fixing critical errors, site down issues (per fix)</td>
-          <td>5,000</td>
+          <td>4,000</td>
         </tr>
       </table>
 
@@ -163,12 +163,17 @@
         <tr>
           <td>E-commerce Integration</td>
           <td>Adding e-commerce functionality (up to 20 products)</td>
-          <td>25,000</td>
+          <td>5,000</td>
         </tr>
         <tr>
           <td>Additional Product Integration</td>
           <td>Adding more products (per 10 products)</td>
-          <td>5,000</td>
+          <td>3,000</td>
+        </tr>
+        <tr>
+          <td>Basic SEO Services</td>
+          <td>Basic SEO services</td>
+          <td>4,000</td>
         </tr>
         <tr>
           <td>SEO Services</td>
@@ -178,12 +183,12 @@
         <tr>
           <td>Website Maintenance</td>
           <td>Monthly maintenance and updates</td>
-          <td>5,000/month</td>
+          <td>5,500/month</td>
         </tr>
         <tr>
           <td>Custom Feature Development</td>
           <td>Custom feature as per client requirement (per feature)</td>
-          <td>10,000+</td>
+          <td>8,000+</td>
         </tr>
       </table>
 
@@ -205,7 +210,7 @@
 
     <button onclick="downloadAsImage()">Download as Image</button>
     <button onclick="downloadAsPDF()">Download as PDF</button>
-    <button onclick="downloadAsExcel()">Download as Excel</button>
+    <!-- <button onclick="downloadAsExcel()">Download as Excel</button> -->
 
     <script>
       function downloadAsImage() {
@@ -241,7 +246,7 @@
         });
       }
 
-      function downloadAsExcel() {
+      /*   function downloadAsExcel() {
         const data = [];
         const headers = ["Service Type", "Description", "Charge (INR)"];
 
@@ -263,7 +268,7 @@
         const wb = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(wb, ws, "Charges");
         XLSX.writeFile(wb, "website_charges.xlsx");
-      }
+      } */
     </script>
   </body>
 </html>
