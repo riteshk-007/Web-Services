@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Service Agreement Download</title>
+    <title>Service Agreement</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
@@ -15,21 +15,23 @@
       }
       .content {
         background-color: #ffffff;
-        padding: 20px;
+        padding: 40px;
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         max-width: 800px;
         margin: auto;
+        font-size: 14px;
+        line-height: 1.6;
       }
       h3 {
         color: #333;
-        text-align: start;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 5px;
       }
       p,
       ul,
       table {
         color: #333;
-        line-height: 1.6;
       }
       ul {
         list-style-type: disc;
@@ -48,15 +50,6 @@
       button:hover {
         background-color: #0056b3;
       }
-      @media (max-width: 600px) {
-        .content {
-          padding: 10px;
-        }
-        button {
-          width: 100%;
-          margin-top: 10px;
-        }
-      }
       .option {
         display: inline-block;
         background: #2980b9;
@@ -67,18 +60,22 @@
         transition: background 0.3s;
         margin: 10px 0px;
       }
+      .signature {
+        margin-top: 30px;
+      }
+      .signature p {
+        margin-bottom: 0;
+      }
     </style>
   </head>
   <body>
     <a href="index.html" class="option">Back</a>
     <div class="content" id="content">
       <h3>Website Development Service Agreement</h3>
-
       <p>
         <strong>This Service Agreement</strong> is made on this [Date] day of
         [Month], [Year] by and between:
       </p>
-
       <p>
         <strong>Ritesh</strong>, an individual/freelancer with principal place
         of business at Rajapuri, Uttam Nagar, New Delhi, India.
@@ -166,19 +163,19 @@
         understood, and agreed to the terms and conditions outlined above.
       </p>
 
-      <p>
-        <strong>Developer</strong><br />
-        Name: Ritesh<br />
-        Signature: ___________________________<br />
-        Date: _______________________________
-      </p>
+      <div class="signature">
+        <p><strong>Developer</strong></p>
+        <p>Name: Ritesh</p>
+        <p>Signature: ___________________________</p>
+        <p>Date: _______________________________</p>
+      </div>
 
-      <p>
-        <strong>Client</strong><br />
-        Name: [Client's Name]<br />
-        Signature: ___________________________<br />
-        Date: _______________________________
-      </p>
+      <div class="signature">
+        <p><strong>Client</strong></p>
+        <p>Name: [Client's Name]</p>
+        <p>Signature: ___________________________</p>
+        <p>Date: _______________________________</p>
+      </div>
 
       <h3>Notes:</h3>
       <ul>
